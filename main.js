@@ -14,7 +14,7 @@ function createWindow () {
       webviewTag: true,
       preload: path.join(__dirname, 'src/renderer.js')
     },
-  roundedCorners: true,
+  roundedCorners: false,
   frame: false,
   })
 
