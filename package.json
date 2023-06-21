@@ -1,7 +1,7 @@
 {
   "name": "base-launcher-mc",
   "version": "0.0.1",
-  "description": "Un base de launcher Minecraft sans le lancement d'une instance de Minecraft.",
+  "description": "Une base de launcher Minecraft sans le lancement d'une instance de Minecraft.",
   "main": "main.js",
   "scripts": {
     "start": "electron main"
