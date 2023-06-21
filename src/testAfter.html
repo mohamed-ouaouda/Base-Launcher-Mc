@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        padding-top: 30px; /* Ajoute un espace pour la barre de titre */
+      }
+  
+      .title-bar {
+        background-color: #151515;
+        color: #fff;
+        height: 30px;
+        line-height: 30px;
+        padding: 5px;
+        position: fixed; /* Fixe la barre de titre en haut de la fenêtre */
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 999; /* Assure une superposition au-dessus du contenu */
+        -webkit-app-region: drag;
+        display: flex;
+        justify-content: flex-end;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+      }
+  
+      .title-bar button {
+        background-color: transparent;
+        color: #fff;
+        border: none;
+        margin-left: 5px;
+        cursor: pointer;
+        font-size: 14px;
+        -webkit-app-region: no-drag;
+      }
+
+      .title-bar button:hover {
+        color: #ccc;
+        -webkit-app-region: no-drag;
+      }
+
+      .close-button::after {
+        content: "✖";
+        -webkit-app-region: no-drag;
+      }
+
+      .minimize-button::after {
+        content: "—";
+        -webkit-app-region: no-drag;
+      }
+
+      .maximize-button::after {
+        content: "☐";
+        -webkit-app-region: no-drag;
+      }
+
+      .title-bar .icon {
+        display: flex;
+        align-items: center; /* Aligne le contenu verticalement */
+        padding: 0 10px;
+        font-size: 18px;
+        margin-right: auto; /* Déplace le contenu vers la gauche */
+      }
+
+      .title-bar .icon img {
+        height: 25px;
+        width: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="title-bar">
+      <span class="icon"><img src="icon.ico"/></span>
+      <button class="minimize-button"></button>
+      <button class="maximize-button"></button>
+      <button class="close-button"></button>
+    </div>
+  </body>
+  <script src="renderer.js"></script>
+  <script>
+    setTimeout(() => {
+      window.location.href = './index.html';
+    }, 5000);
+  </script>
+</html>
